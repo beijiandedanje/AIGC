@@ -1,5 +1,5 @@
 # rag
-这是暑期实习的RAG代码仓库
+这是aigc作业的代码仓库
 
 alice镇楼
 
@@ -19,10 +19,6 @@ conda activate rag
 安装依赖库
 pip install -r requirements.txt
 
-```
-接下来修改rag\settings.py路径下的ALLOWED_HOSTS = ['172.26.136.89']，其中的ip地址改为部署的服务器地址
-
-```
 启动服务器：
 python manage.py runserver 0.0.0.0:8000
 ```
@@ -175,80 +171,4 @@ sudo systemctl restart gunicorn
 关于多个向量库，可以先跟前端沟通一下，添加那三个向量库按钮的响应，然后在article\views.py文件里修改vectorstore指向的数据库
 
 
-# requirements
-```
-python==3.10
-django==5.0.7
-langchain==0.0.316
-openai==0.28.1
-tiktoken==0.5.1
-cohere==5.5.8
-chromadb==0.4.15
-pypdf==4.2.0
-docx2txt==0.8
-olefile==0.47
-oletools==0.60.2
-openpyxl==3.1.5
-python-pptx==1.0.2
-```
-（我使用的是python3.10，其他版本的环境我没试过，上面的只是部分环境，如果后续还需要其他的库，请帮忙在这里修改并且补上去）
 
-# Version 1.0.0
-更新by 姚奕丹
-
-修改的文件内容：
-
-增加了两个视图函数和对对话框输入的处理和上传文件的处理，使用的是**chromab**向量数据库
-
-增加的功能：
-
- 1.与gpt交互的功能
-
- 2.能够初步使用RAG进行检索增强
-
- 3.能够处理PDF和CSV类型的文件
-
-# Version 1.0.1
-更新by 杜诺文
-
-修改的文件内容：
-
-更新了article\views.py
-
-1，增加了html文件的处理
-
-# Version 1.0.2
-更新by 关振聪，夏骏豪
-
-修改的文件内容：
-
- 1.增加了多选文件选择按钮（html，js）。
- 2.修改了pdf多文件接收（view.py中的upload_file()）
-
- requirements
- 
- 需要安装库：
- 
- pypdf
-
-增加的功能：
-
- 1.能够多选文件
-
-# Version 1.1.0
-更新by姚奕丹，关振聪，夏骏豪，徐政
-
-更新了article\views.py 、article\urls.py 、rag\settings.py 、static\js\scripts.js 、templates\article\home.html
-
-1，优化了网页端界面，修复了之前的“无法上传多个文件”的bug
-
-2，增加了读取word文档的功能
-
-3，增加了查看向量库已载入文件目录的功能
-
-# Version 1.1.1
-更新by姚奕丹，杨洋，徐政
-
-更新了article\views.py ，utils\xlsx.py ，requirements.txt
-
-1，增加了xlsx,txt,pptx文件的处理
