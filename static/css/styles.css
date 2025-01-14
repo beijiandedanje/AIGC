@@ -1,0 +1,202 @@
+html, body {
+    height: 80%; /* 使 HTML 和 body 标签充满整个视口 */
+    margin: 0; /* 移除默认的 margin */
+    padding: 0; /* 移除默认的 padding */
+}
+
+.left-panel {
+    background-color: #ffffff; /* 更改为白色背景 */
+    border-right: 1px solid #ddd; /* 添加右侧边框 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    padding: 20px;
+    height: 85vh;
+}
+
+.left-panel .file-input input[type="file"] {
+    padding: 10px 15px; /* 增加内边距 */
+    margin-right: 5px; /* 添加右边距 */
+    border: 1px solid #ddd; /* 添加边框 */
+    border-radius: 15px; /* 添加圆角 */
+    background-color: #f8f8f8; /* 设置背景色 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+}
+
+.left-panel button {
+    background-color: #007bff; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 移除边框 */
+    padding: 10px 15px; /* 增加内边距 */
+    margin-right: 5px; /* 添加右边距 */
+    border-radius: 5px; /* 添加圆角 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+}
+
+.left-panel .form-check-inline button {
+    width: 80px; /* 设置固定宽度 */
+    box-sizing: border-box; /* 确保边框和内边距包含在宽度内 */
+    /* 其他样式保持不变 */
+}
+
+.left-panel .form-check {
+    margin-bottom: 15px;
+}
+
+.left-panel .form-check-input {
+    margin-right: 10px;
+}
+
+.left-panel .form-check-label {
+    font-weight: 600; /* 加粗字体 */
+    color: #333; /* 文字颜色 */
+}
+
+.left-panel #save-path {
+    font-size: 14px; /* 调整文字大小 */
+    color: #666; /* 调整文字颜色 */
+}
+
+.right-panel {
+    background-color: #fff; /* 根据需要调整背景颜色 */
+    padding: 15px;
+    height: 85vh; /* 使右侧面板填满整个视口高度 */
+}
+
+.chat-container {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #ddd; /* 添加边框 */
+    border-radius: 15px; /* 设置圆角 */
+    padding: 10px;  /*添加内边距 */
+    margin-bottom: 10px; /* 添加底部外边距 */
+    margin: 10px; /* 添加垂直外边距   5px  */
+    max-width: 100%; /* 设置最大宽度 */
+    display: block;  /*使聊天框在同一行显示 */
+    word-wrap: break-word; /* 确保长单词不会溢出容器 */
+    position: relative; /* 确保可以使用绝对定位 */
+}
+
+
+/* 为发送者和机器人的消息添加不同的背景色 */
+.user-message {
+    background-color: skyblue; /* 用户消息背景色 */
+    border-radius: 15px; /* 圆角半径 */
+    padding: 10px; /* 内边距 */
+    margin: 5px;
+    float: right;  /* 将用户消息向右对齐 */
+}
+
+.bot-message {
+    background-color: #e7c2c2; /* 机器人消息背景色 */
+    border-radius: 15px; /* 圆角半径 */
+    padding: 10px; /* 内边距 */
+    margin: 5px;
+    float: left;  /*将机器人消息向左对齐 */
+
+}
+
+/* 清除浮动，确保容器能够包含浮动元素*/
+.chat-messages:after {
+    content: "";
+    display:table;
+    clear: both;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#send-btn {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.container-fluid {
+    min-height: 85%; /* 使容器至少与视口一样高 */
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel, .right-panel {
+    flex: 1; /* 使左侧和右侧面板平均分配容器的高度 */
+    /* 其他样式保持不变 */
+}
+
+/* .left-panel */
+
+.form-check1 {
+    background-color: #f0f0f0; /* 灰色背景 */
+    border-radius: 5px; /* 圆角边框 */
+    padding: 10px; /* 内边距 */
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-check-input {
+    /*-webkit-appearance: none;  移除默认外观 */
+    /*-moz-appearance: none;*/
+    /*appearance: none;*/
+    width: 20px; /* 增加选择框的大小 */
+    height: 20px; /* 增加选择框的大小 */
+    /* margin-right: 10px;*/
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.form-check-label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+
+.textbox {
+    width: 100%; /* 设置文本框宽度为父元素的100% */
+    max-width: 400px; /* 增加最大宽度限制 */
+    /* margin: 20px;  上下间距20px，左右自动居中 */
+}
+
+#myTextBox {
+    width: 100%; /* 文本框宽度占满父元素 */
+    height: 50px; /* 增加文本框的高度 */
+    padding: 15px 20px; /* 增加内边距 */
+    font-size: 18px; /* 增加字体大小 */
+    border: 2px solid #ccc; /* 加粗边框样式 */
+    border-radius: 8px; /* 增加边框圆角 */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* 调整内阴影 */
+    transition: border-color 0.3s ease-in-out; /* 边框颜色过渡效果 */
+}
+
+#myTextBox:focus {
+    border-color: #66afe9; /* 获取焦点时的边框颜色 */
+    outline: none; /* 去除聚焦时的默认轮廓线 */
+    box-shadow: 0 0 10px rgba(102, 175, 233, 0.6); /* 聚焦时的外阴影 */
+}
+
+.yuliu{
+    /*预留文本框的形式*/
+}
+
